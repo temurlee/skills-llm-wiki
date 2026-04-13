@@ -1,6 +1,6 @@
 ---
 name: llm-wiki
-description: Personal knowledge base system using the LLM Wiki pattern (Karpathy-style). Manages a vault with raw/ (original sources) and wiki/ (distilled knowledge pages). Use when user says "ingest URL", "clip URL", or asks to save/store content to the knowledge base. Handles full ingest flow: fetch URL with defuddle, save to raw/, distill to wiki/, update index.md and log.md, optionally push to GitHub.
+description: Personal knowledge base system using the LLM Wiki pattern (Karpathy-style). Manages a vault with raw/ (original sources) and wiki/ (distilled knowledge pages). Use when user says "ingest <URL>", "clip <URL>", "加入知识库 <URL>", "存知识库 <URL>", "记录这个 <URL>", or any natural language request to save a URL into the knowledge base. Handles full ingest flow: fetch URL with defuddle, save to raw/, distill to wiki/, update index.md and log.md, optionally push to GitHub.
 ---
 
 # LLM Wiki

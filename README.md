@@ -76,6 +76,9 @@ cd ~/.openclaw/workspace/skills/llm-wiki && npm install
 | 指令 | 说明 |
 |------|------|
 | `ingest <URL>` | 抓取页面，提炼知识页，更新索引 |
+| `加入知识库 <URL>` | 同上，自然语言触发 |
+| `存知识库 <URL>` | 同上 |
+| `记录这个 <URL>` | 同上 |
 | `查一下 <URL>` | 仅读取内容回答，不存入知识库 |
 
 ---

@@ -14,7 +14,7 @@ vault/
 └── wiki/    ← index.md + log.md + 所有知识页（平铺）
 
 ### Ingest 流程
-用户说"ingest <URL>"时执行：
+用户说"ingest <URL>"或自然语言等价表达（"加入知识库"、"存知识库"、"记录这个"等）时执行：
 1. 运行 clip 脚本抓取并保存原文到 raw/：
    node <skill-path>/scripts/clip.mjs <URL> <vault-path>
 2. 读取 raw/ 里保存的文件
