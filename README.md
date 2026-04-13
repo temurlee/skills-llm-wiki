@@ -30,7 +30,7 @@ vault/
 1. 将 skill 目录放入 OpenClaw workspace 的 skills 目录
 2. 在 skill 目录内执行 `npm install`
 3. 创建 vault 目录，包含 `raw/` 和 `wiki/` 子目录
-4. 在 `AGENTS.md` 中配置 vault 路径
+4. 将 `references/agents-wiki-section.md` 中的内容复制到你的 `AGENTS.md`，替换其中的路径变量
 
 ## 致谢
 
