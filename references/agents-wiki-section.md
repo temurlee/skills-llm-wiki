@@ -1,6 +1,7 @@
 # AGENTS.md Wiki 配置片段
 
-安装 llm-wiki skill 后，将以下内容复制到你的 `AGENTS.md` 中，并替换 `<vault-path>` 和 `<skill-path>` 为实际路径。
+> 此文件由 `setup.mjs` 自动写入 AGENTS.md，无需手动操作。
+> 如需手动配置，将以下内容复制到 AGENTS.md，替换 `<vault-path>` 和 `<skill-path>` 为实际路径。
 
 ---
 
