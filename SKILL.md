@@ -18,19 +18,28 @@ vault/
     └── *.md        ← knowledge pages (flat, no subdirectories)
 ```
 
-## Setup (first time)
+## First-Run Initialization
 
-1. Create vault directory and initialize git:
+Before running the ingest flow, check if the vault is initialized:
+
+```
+wiki/index.md exists at the configured vault path?
+```
+
+**If NOT initialized** (first time):
+1. Ask the user: "你的 vault 目录放在哪里？（例如 ~/obsidian-vault）"
+2. After user replies with a path, run the setup script:
    ```bash
-   mkdir -p <vault>/raw <vault>/wiki
-   cd <vault> && git init && git remote add origin <github-repo>
+   node <skill-dir>/scripts/setup.mjs <vault-path> <skill-dir>
    ```
-2. Install defuddle:
-   ```bash
-   cd <skill-dir> && npm install defuddle
-   ```
-3. Create `wiki/index.md` and `wiki/log.md` (see references/templates.md).
-4. Set vault path in your AGENTS.md wiki section.
+   This will:
+   - Create `<vault>/raw/` and `<vault>/wiki/` directories
+   - Generate initial `wiki/index.md` and `wiki/log.md`
+   - Append the wiki rules section to the workspace `AGENTS.md`
+3. Confirm to the user: "初始化完成，vault 在 `<vault-path>`，已更新 AGENTS.md。"
+4. Continue with the ingest flow.
+
+**If already initialized**: skip directly to Ingest Flow.
 
 ## Ingest Flow
 
