@@ -2,12 +2,6 @@
 
 > 基于 LLM 的个人知识库 skill，适用于 OpenClaw。
 
-将任意网页 URL 一句话转化为结构化知识页，自动维护索引与日志，可选同步 GitHub。灵感来自 [Andrej Karpathy 的 LLM Wiki 方案](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)，内容抓取引擎与 [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper) 一致。
-
----
-
-## 解决什么问题
-
 你刷 X、看博客、读文章，遇到好东西——收藏了，然后忘了。
 
 llm-wiki 改变这个循环：把链接发给 agent，说一句 `ingest`，它帮你把核心观点提炼成一页结构化笔记，存进你的知识库。原文完整归档在 `raw/`，提炼后的洞察沉淀在 `wiki/`。下次你问相关问题，agent 能直接调用这些知识回答你，而不是让你自己去翻收藏夹。
