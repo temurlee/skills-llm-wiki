@@ -74,4 +74,23 @@ if (existsSync(agentsPath) && existsSync(agentsTemplatePath)) {
   console.log('⚠ AGENTS.md or template not found, skipping');
 }
 
+// 5. append Lint task to HEARTBEAT.md
+const heartbeatPath = join(process.env.HOME || '/root', '.openclaw', 'workspace', 'HEARTBEAT.md');
+const lintSection = `
+### Lint（wiki 健康检查）
+检查：孤立页面（无 related 引用）、矛盾内容、超过 3 个月未更新的核心页。
+`;
+
+if (existsSync(heartbeatPath)) {
+  const heartbeatContent = readFileSync(heartbeatPath, 'utf8');
+  if (!heartbeatContent.includes('Lint（wiki 健康检查）')) {
+    appendFileSync(heartbeatPath, lintSection);
+    console.log('✓ Appended Lint task to HEARTBEAT.md');
+  } else {
+    console.log('⚠ HEARTBEAT.md already has Lint task, skipping');
+  }
+} else {
+  console.log('⚠ HEARTBEAT.md not found, skipping');
+}
+
 console.log(`\n✅ llm-wiki initialized at ${vaultPath}`);
